@@ -1,8 +1,7 @@
 ﻿#pragma once
 
 #include <QMainWindow>
-class Electrode;
-class BrainFigure;
+class TopoWidget;
 
 class MainWindow : public QMainWindow
 {
@@ -13,12 +12,10 @@ public:
     ~MainWindow();
 private:
     void InitCtrl();
-    static const int CHANNEL_NUM = 8;
     QWidget *m_pWidget = nullptr;
 
+    TopoWidget *m_pTopoWidget = nullptr;
 
-private:
-    Electrode *m_pElectrode[CHANNEL_NUM];
 
-    BrainFigure *m_pBrainFigure = nullptr;
+
 };

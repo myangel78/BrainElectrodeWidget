@@ -11,13 +11,16 @@ CONFIG += c++17
 SOURCES += \
     BrainFigure.cpp \
     Electrode.cpp \
+    TopoWidget.cpp \
     main.cpp \
     MainWindow.cpp
 
 HEADERS += \
     BrainFigure.h \
     Electrode.h \
-    MainWindow.h
+    Global.h \
+    MainWindow.h \
+    TopoWidget.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

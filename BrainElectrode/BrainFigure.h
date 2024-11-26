@@ -3,6 +3,7 @@
 #include <QWidget>
 #include <QColor>
 #include <QPainter>
+#include "Global.h"
 class Electrode;
 
 
@@ -18,7 +19,6 @@ private:
 
     bool m_bIsSelected = false;
 
-    static const int CHANNEL_NUM = 8;
     Electrode *m_pElectrode[CHANNEL_NUM];
     QVector<QPointF> m_vecPointLocation;
 
