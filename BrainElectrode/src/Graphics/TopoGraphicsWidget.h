@@ -2,6 +2,7 @@
 
 #include <QWidget>
 #include <QGraphicsScene>
+#include "Global.h"
 class ElectrodeItem;
 class HeadOutlineItem;
 class TopoGraphicsView;
@@ -23,7 +24,7 @@ private:
 private:
     // 新建场景
     QGraphicsScene *m_pScene = nullptr;
-    ElectrodeItem *m_pElectrodeItem = nullptr;
+    ElectrodeItem *m_pElectrodeItem[CHANNEL_NUM];
     HeadOutlineItem *m_pHeadOutlineItem = nullptr;
     TopoGraphicsView *m_pView = nullptr;
 

@@ -29,10 +29,17 @@ void TopoGraphicsWidget::InitCtrl()
     // 新建场景
     m_pScene = new QGraphicsScene();
 
-    m_pElectrodeItem = new ElectrodeItem();
+
     m_pHeadOutlineItem = new HeadOutlineItem();
 
-    m_pElectrodeItem->setParentItem(m_pHeadOutlineItem);
+    for(int i = 0; i < CHANNEL_NUM; ++i)
+    {
+        m_pElectrodeItem[i] = new ElectrodeItem();
+        m_pElectrodeItem[i]->setParentItem(m_pHeadOutlineItem);
+        m_pElectrodeItem[i]->setPos(i*50,i*50);
+    }
+
+
     // 将图形项添加到场景中
     m_pScene->addItem(m_pHeadOutlineItem);
 
