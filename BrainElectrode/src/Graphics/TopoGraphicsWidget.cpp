@@ -29,7 +29,6 @@ void TopoGraphicsWidget::InitCtrl()
     // 新建场景
     m_pScene = new QGraphicsScene();
 
-
     m_pHeadOutlineItem = new HeadOutlineItem();
 
     for(int i = 0; i < CHANNEL_NUM; ++i)
@@ -50,18 +49,22 @@ void TopoGraphicsWidget::InitCtrl()
     m_pScene->setBackgroundBrush(QColor(255,255,255, 100));
     // m_pScene.setBackgroundBrush(QPixmap("../mym_pScene/background.png"));
 
+    // m_pScene->setSceneRect(QRectF(m_pView->rect()));
+
+
+
+
 }
 
 void TopoGraphicsWidget::resizeEvent(QResizeEvent *event)
 {
     //重新设置子控件的大小和位置
-    //...
     QWidget::resizeEvent(event);
     if(m_pHeadOutlineItem)
     {
-        int size = qMin(width(),height());
+        int size = qMin(this->width(),this->height());
         m_pHeadOutlineItem->setWidth(size);
         m_pScene->setSceneRect(0,0,size,size);
-        m_pView->resize(size +2,size+2);
+        m_pView->resize(m_pScene->itemsBoundingRect().width(),m_pScene->itemsBoundingRect().height());
     }
 }

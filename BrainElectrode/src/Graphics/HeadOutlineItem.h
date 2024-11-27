@@ -17,7 +17,7 @@ private:
     QColor mColorBorder=Qt::black;
     QColor mColorBackGround=Qt::white;
 
-    int m_size = 500;
+    int m_size = 800;
 protected:
 
     // void keyPressEvent(QKeyEvent *event)override;

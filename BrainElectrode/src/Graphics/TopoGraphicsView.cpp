@@ -40,5 +40,6 @@ void TopoGraphicsView::keyPressEvent(QKeyEvent *event)
         break;
     }
     QGraphicsView::keyPressEvent(event);
+
 }
 

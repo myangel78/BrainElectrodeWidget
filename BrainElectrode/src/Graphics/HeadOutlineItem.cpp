@@ -103,7 +103,6 @@ void HeadOutlineItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *,
     painter->drawPath(path);
     painter->restore();
 
-
 }
 
 
