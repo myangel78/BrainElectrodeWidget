@@ -17,7 +17,4 @@ private:
 
     TopoWidget *m_pTopoWidget = nullptr;
     TopoGraphicsWidget *m_pTopoGraphicsView = nullptr;
-
-
-
 };

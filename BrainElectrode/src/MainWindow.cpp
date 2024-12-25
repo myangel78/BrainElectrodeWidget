@@ -8,6 +8,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
+    InitConfig();
     InitCtrl();
     setMinimumSize(800,800);
 }
@@ -26,22 +27,5 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::InitCtrl()
-{
 
-    m_pWidget = new QWidget(this);
-#if 0 //Display by Widget
-    m_pTopoWidget = new TopoWidget(this);
-    QVBoxLayout *vertlayout = new QVBoxLayout();
-    vertlayout->addWidget(m_pTopoWidget);
-#else //Display by GraphicsView
-    m_pTopoGraphicsView = new TopoGraphicsWidget(this);
-    QVBoxLayout *vertlayout = new QVBoxLayout();
-    vertlayout->addWidget(m_pTopoGraphicsView);
-#endif
-    m_pWidget->setLayout(vertlayout);
 
-    m_pWidget->setMinimumSize(QSize(600,600));
-    setCentralWidget(m_pWidget);
-
-}
